@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#090b10">
+  <meta name="description" content="GymRote — plano de hipertrofia e acompanhamento de treinos.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <title>GymRote</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark">G</span><div><b>GymRote</b><small>TRAIN WITH PURPOSE</small></div></div>
+      <button id="installBtn" class="icon-btn" hidden aria-label="Instalar aplicação">↓</button>
+    </header>
+
+    <main>
+      <section id="home" class="screen active">
+        <div class="eyebrow" id="todayLabel">O TEU PLANO</div>
+        <div class="hero">
+          <div><p class="muted">BEM-VINDO DE VOLTA</p><h1>Constrói.<br><span>Progride.</span></h1></div>
+          <div class="hero-ring"><strong id="weekProgress">0/5</strong><small>DIAS</small></div>
+        </div>
+        <div class="section-head"><div><p class="muted">SESSÃO DE HOJE</p><h2 id="todayTitle">A preparar...</h2></div><span class="pill" id="todayTag">TREINO</span></div>
+        <div id="todayCard" class="today-card"></div>
+        <div class="section-head"><div><p class="muted">ESTA SEMANA</p><h2>O teu ritmo</h2></div></div>
+        <div class="week-strip" id="weekStrip"></div>
+        <div class="tip"><span>✦</span><p><b>Consistência acima de tudo.</b><br>Regista as cargas e procura progredir com técnica e controlo.</p></div>
+      </section>
+
+      <section id="workouts" class="screen">
+        <div class="eyebrow">PROGRAMA SEMANAL</div><h1>Os teus <span>treinos.</span></h1>
+        <p class="muted intro">Cinco sessões de hipertrofia, com prioridade no desenvolvimento dos braços.</p>
+        <div id="workoutList" class="workout-list"></div>
+      </section>
+
+      <section id="session" class="screen">
+        <button class="back-btn" id="backToWorkouts">← Treinos</button>
+        <div class="eyebrow" id="sessionDay">SEGUNDA-FEIRA</div>
+        <h1 id="sessionTitle">Braços <span>completos.</span></h1>
+        <p class="muted intro" id="sessionDescription"></p>
+        <div class="session-meta"><div><b id="exerciseCount">6</b><small>EXERCÍCIOS</small></div><div><b>60–90</b><small>MINUTOS</small></div><div><b>1–3</b><small>RIR*</small></div></div>
+        <div id="exerciseList"></div>
+        <button id="finishWorkout" class="primary-btn full">Concluir treino</button>
+        <p class="tiny muted">*RIR: terminar geralmente com 1–3 repetições possíveis antes da falha.</p>
+      </section>
+
+      <section id="progress" class="screen">
+        <div class="eyebrow">ACOMPANHAMENTO</div><h1>O teu <span>progresso.</span></h1>
+        <div class="stats-grid"><div class="stat"><small>TREINOS CONCLUÍDOS</small><b id="totalWorkouts">0</b></div><div class="stat"><small>SEQUÊNCIA ATUAL</small><b id="streak">0 dias</b></div></div>
+        <div class="section-head"><div><p class="muted">HISTÓRICO</p><h2>Últimas sessões</h2></div></div>
+        <div id="historyList" class="history-list"></div>
+        <div class="section-head"><div><p class="muted">DADOS LOCAIS</p><h2>O teu registo</h2></div></div>
+        <button id="exportBtn" class="secondary-btn full">Exportar os meus dados</button>
+        <label class="secondary-btn full import-label">Importar cópia de segurança<input id="importFile" type="file" accept="application/json"></label>
+        <button id="resetBtn" class="danger-btn full">Apagar todos os dados</button>
+        <p class="tiny muted">Os dados ficam guardados neste dispositivo e neste navegador. Exporta uma cópia de segurança regularmente.</p>
+      </section>
+    </main>
+
+    <nav class="tabbar">
+      <button class="tab active" data-tab="home"><span>⌂</span><small>Início</small></button>
+      <button class="tab" data-tab="workouts"><span>▤</span><small>Treinos</small></button>
+      <button class="tab" data-tab="progress"><span>↗</span><small>Progresso</small></button>
+    </nav>
+  </div>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
