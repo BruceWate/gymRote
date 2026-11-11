@@ -37,12 +37,20 @@
         <div id="workoutList" class="workout-list"></div>
       </section>
 
+      <section id="homeMode" class="screen">
+        <div class="eyebrow">TREINOS COMPLEMENTARES</div><h1>Treina em <span>casa.</span></h1>
+        <p class="muted intro">Sessões de 20 minutos, sem equipamento. Usa-as para substituir uma sessão de ginásio que não conseguiste fazer — não para duplicar o volume semanal.</p>
+        <div class="tip"><span>✦</span><p><b>Recuperação primeiro.</b><br>Evita treinar intensamente o mesmo grupo muscular em dias consecutivos.</p></div>
+        <div class="section-head"><div><p class="muted">HOME MODE</p><h2>Escolhe a sessão</h2></div></div>
+        <div id="homeWorkoutList" class="workout-list"></div>
+      </section>
+
       <section id="session" class="screen">
         <button class="back-btn" id="backToWorkouts">← Treinos</button>
         <div class="eyebrow" id="sessionDay">SEGUNDA-FEIRA</div>
         <h1 id="sessionTitle">Braços <span>completos.</span></h1>
         <p class="muted intro" id="sessionDescription"></p>
-        <div class="session-meta"><div><b id="exerciseCount">6</b><small>EXERCÍCIOS</small></div><div><b>60–90</b><small>MINUTOS</small></div><div><b>1–3</b><small>RIR*</small></div></div>
+        <div class="session-meta"><div><b id="exerciseCount">6</b><small>EXERCÍCIOS</small></div><div><b id="sessionTime">60–90</b><small>MINUTOS</small></div><div><b>1–3</b><small>RIR*</small></div></div>
         <div id="exerciseList"></div>
         <button id="finishWorkout" class="primary-btn full">Concluir treino</button>
         <p class="tiny muted">*RIR: terminar geralmente com 1–3 repetições possíveis antes da falha.</p>
@@ -63,7 +71,8 @@
 
     <nav class="tabbar">
       <button class="tab active" data-tab="home"><span>⌂</span><small>Início</small></button>
-      <button class="tab" data-tab="workouts"><span>▤</span><small>Treinos</small></button>
+      <button class="tab" data-tab="workouts"><span>▤</span><small>Ginásio</small></button>
+      <button class="tab" data-tab="homeMode"><span>⌂</span><small>Casa</small></button>
       <button class="tab" data-tab="progress"><span>↗</span><small>Progresso</small></button>
     </nav>
   </div>
