@@ -10,3 +10,5 @@
 .demo-placeholder b{font-size:12px}
 .demo-placeholder p{font-size:11px;color:var(--muted);line-height:1.45}
 .demo-placeholder a{display:inline-block;color:var(--cyan);font-size:11px;font-weight:800;text-decoration:none}
+
+.tabbar{grid-template-columns:repeat(4,1fr)}
